@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>B站智能社JavaSript第一课</title>
+    <style>
+        #div1 {width:200px;height:50px;color:red;background: antiquewhite;display:none}
+        #div2 {width:200px;height:50px;color:red;background: antiquewhite;display:none}
+    </style>
+    <script>document.getElementById()</script>
+</head>
+
+<body>
+<input type="checkbox"  onmouseover="div1.style.display='block';"
+ onmouseout="div1.style.display='none';"/>
+<div id="div1">为了您的信息安全</div>
+<h1>document.getElementById兼容性</h1>
+<input type="checkbox" onmouseover="document.getElementById('div2').style.display='block';"/>
+<div id="div2">哈哈哈</div>
+
+<h1> onmouseover 鼠标在上面则显示</h1>
+<input type="checkbox" onmouseover="alert('弹窗')"/>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+.settings
+.idea/*
+/thriftclient/.idea
+
+/test-output/
+
+.DS_Store
+target/*
+*.iml
+
+
