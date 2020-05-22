@@ -1,9 +1,14 @@
 package protobuf.mlxfeature;
 import protobuf.mlxfeature.Feature.ItemFeature;
 import protobuf.mlxfeature.Feature.UserFeature;
-import protobuf.mlxfeature.Feature.RequestFeature;
 import protobuf.mlxfeature.Feature.*;
 import protobuf.mlxfeature.Feature.RawFeature;
+
+/**
+ * @Author: Renbingchen123@126.com
+ * @Date: 2020-05-22 21:32
+ * @explain:测试 mlx feature 使用
+ * */
 public class AddFeature {
     public static KVPair.Builder getKvPair(String k ,String v){
         KVPair.Builder kvPairBuilder = Feature.KVPair.newBuilder();
