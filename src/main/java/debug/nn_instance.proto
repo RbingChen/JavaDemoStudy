@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package mlx.predictor.pb;
+
+message KVPair {
+  string key = 1;
+  string value = 2;
+}
+
+message Item {
+  uint64 item_id = 1;
+  string item_type = 2;
+  repeated KVPair items = 3;
+}
+
+message Embedding {
+  uint32 col_id = 1;
+  repeated uint64 values = 2;
+}
+
+message NNInstance {
+  uint64 item_id = 1;     // 需要预估的item的标识，预估过程并不使用，在返回结果中带来，用于上游识别对应的item
+  string item_type = 2;   // 需要预估的item类型，同上
+  repeated float dense = 3;   // 预估dense部分的数组，上游抽取完dense特征后，传入该数组
+  repeated Embedding embedding = 4;   // 美团推荐业务使用，其他业务可忽略
+  repeated uint64 wide = 5;   // 预估sparse部分的数据，上游按照col id和feature签名组合而成的sparse签名特征
+}
+
+// TODO 为了与第一版接口兼容，暂时取这个名字，后续会用thrift定义的接口
+message NNInstances {
+  repeated NNInstance instances = 1;  // 上游抽取特征的业务使用
+  // 以下三个字段，由predictor抽取特征的业务所需要传入的原始数据
+  repeated KVPair req_data = 2;
+  repeated KVPair user_data = 3;
+  repeated Item item_data = 4;
+}

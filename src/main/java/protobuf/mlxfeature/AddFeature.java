@@ -23,7 +23,9 @@ public class AddFeature {
 
         userFeatureBuilder.addPairs(getKvPair("userid","1232323"));
         userFeatureBuilder.addPairs(getKvPair("gender","female"));
-
+        /**
+         * List 
+         * */
         itemFeatureBuilder.addPairs(getKvPair("itemid","98394"));
         itemFeatureBuilder.addPairs(getKvPair("price","12.2"));
         rawFeatureBuilder.addItemFeature(itemFeatureBuilder);
