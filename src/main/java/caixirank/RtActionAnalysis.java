@@ -1,7 +1,7 @@
 package caixirank;
 
 import com.alibaba.fastjson.JSONArray;
-import tool.ReadResourcesFile;
+import com.cimon.tool.ReadResourcesFile;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

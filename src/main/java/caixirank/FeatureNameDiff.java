@@ -1,6 +1,6 @@
 package caixirank;
 
-import tool.ReadResourcesFile;
+import com.cimon.tool.ReadResourcesFile;
 
 import java.io.*;
 import java.util.Set;
