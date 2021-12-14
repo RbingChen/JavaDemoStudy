@@ -27,7 +27,8 @@ public class JSONQuestion20211214 {
 
         List<LoadStatus> loadStatusList1 = method1(jsonArray);
         List<LoadStatus> loadStatusList2 = method2(jsonArray);
-
+        System.out.println(loadStatusList1.get(0).getLoadTime());
+        System.out.println(loadStatusList2.get(1).getLoadTime());
     }
 
     public static JSONArray  produceJsonArray(){
@@ -37,7 +38,7 @@ public class JSONQuestion20211214 {
         JSONArray jsonArray = new JSONArray();
 
         jsonArray.add(JSON.parseObject(JSONObject.toJSONString(loadStatus1)));
-        jsonArray.add(JSON.parseObject(JSONObject.toJSONString(loadStatus1)));
+        jsonArray.add(JSON.parseObject(JSONObject.toJSONString(loadStatus2)));
 
         return jsonArray;
     }
