@@ -30,7 +30,10 @@ public class JSONQuestion20211214 {
         System.out.println(loadStatusList1.get(0).getLoadTime());
         System.out.println(loadStatusList2.get(1).getLoadTime());
     }
-
+     /**
+      *
+      * 生成JSONArray 测试数据
+      * */
     public static JSONArray  produceJsonArray(){
         LoadStatus loadStatus1 = new LoadStatus("2021-12-14 14:00","sucess");
         LoadStatus loadStatus2 = new LoadStatus("2021-12-13 11:11","sucess");
