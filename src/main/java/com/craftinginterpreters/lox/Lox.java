@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import java.util.List;
 public class Lox {
     private static boolean hadError = false;
+    private static boolean hadRuntimeError = true;
+
     public static void error(int line,String message){
         report(line,"",message);
     }
@@ -19,6 +21,10 @@ public class Lox {
         } else {
             report(token.line, " at '" + token.lexeme + "'", message);
         }
+    }
+    public static void runtimeError(RuntimeError error){
+        System.err.println(error.getMessage()+"\n[line "+error.getToken().line+" ]");
+        hadRuntimeError = true;
     }
     public  static void report(int line,String where,String message){
         System.err.println("[line "+line+"] Error "+ where + ":"+message);
@@ -38,6 +44,7 @@ public class Lox {
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         run(new String(bytes, Charset.defaultCharset()));
         if(hadError) System.exit(65);
+        if (hadRuntimeError) System.exit(70);
     }
     private static void runPrompt() throws IOException{
         InputStreamReader input = new InputStreamReader(System.in);
