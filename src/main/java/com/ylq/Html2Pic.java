@@ -71,8 +71,8 @@ public class Html2Pic {
     public static void main(String args[]) throws Exception {
         Map<String, Object> map = new HashMap<>();
         map.put("title", "标题");
-        map.put("bg", Html2Pic.PATH+"/P1.jpeg");
-        map.put("qrCode",  Html2Pic.PATH+"/P1.jpeg");
+        map.put("bg", Html2Pic.PATH+"/P222.jpeg");
+        map.put("qrCode",  Html2Pic.PATH+"/P1222.jpeg");
         turnImage("test.html", map);
     }
 
