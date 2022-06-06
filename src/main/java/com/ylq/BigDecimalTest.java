@@ -2,6 +2,10 @@ package com.ylq;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class BigDecimalTest {
     public static void main(String args[]){
@@ -14,6 +18,15 @@ public class BigDecimalTest {
         /****/
         BigDecimal bd2 = bd.setScale(2, RoundingMode.FLOOR);
         System.out.println(" demo2 : "+bd2.toString());//新对象打印
+
+        HashMap<List<Integer>,Integer> map = new HashMap();
+
+        ArrayList<Integer> list = new ArrayList();
+        list.hashCode();
+        list.equals(list);
+        list.add(1);list.add(2);
+        map.put(list,2);
+
 
     }
 }
