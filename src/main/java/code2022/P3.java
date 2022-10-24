@@ -21,12 +21,13 @@ public class P3 {
     }
 
     public static void main(String[] args){
-        Scanner reader = new Scanner(System.in);
-        int length = reader.nextInt();
-        int[] nums = new int[length];
-        for (int i = 0; i < length; i++) {
-            nums[i] = reader.nextInt();
-        }
+//        Scanner reader = new Scanner(System.in);
+//        int length = reader.nextInt();
+//        int[] nums = new int[length];
+//        for (int i = 0; i < length; i++) {
+//            nums[i] = reader.nextInt();
+//        }
+        int nums[]= {3,4,5,1};
         System.out.println(solution(nums));
 
     }

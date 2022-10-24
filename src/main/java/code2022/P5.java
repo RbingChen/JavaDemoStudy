@@ -1,5 +1,6 @@
 package code2022;
 import java.util.*;
+//?
 public class P5 {
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums.length == 0)
@@ -23,5 +24,15 @@ public class P5 {
             if (i > max) max = i;
         res.add(max);
         return res.stream().mapToInt(Integer::valueOf).toArray();
+    }
+    public static String print(int[] maxSlidingWindow){
+          String t ="";
+          for(int i = 0;i<maxSlidingWindow.length;i++){
+              if(i==0)
+                  t = t+ String.valueOf(maxSlidingWindow[i]);
+              else
+                  t = t+" "+String.valueOf(maxSlidingWindow[i]);
+          }
+          return t;
     }
 }

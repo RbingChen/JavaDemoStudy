@@ -1,7 +1,7 @@
 package code2022;
 import java.util.*;
 public class P9 {
-    public String[] getFolderNames(String[] names) {
+    public String[] getActualNames(String[] names) {
         Map<String, Integer> map = new HashMap<>();
         Set<String> created = new HashSet<>();
         String[] ans = new String[names.length];
