@@ -1,7 +1,7 @@
 package code2022;
 import java.util.*;
 public class P9 {
-    public String[] getActualNames(String[] names) {
+    public static String getActualNames(String[] names) {
         Map<String, Integer> map = new HashMap<>();
         Set<String> created = new HashSet<>();
         String[] ans = new String[names.length];
@@ -20,6 +20,18 @@ public class P9 {
             ans[i] = name;
             created.add(name);
         }
-        return ans;
+
+        String t ="";
+        for(int i = 0;i<ans.length;i++){
+            if(i==0)
+                t = t+ ans[i];
+            else
+                t = t+" "+ans[i];;
+        }
+        return t;
+    }
+    public  static void main(String args[]){
+        String arr[] = {"pes","fifa","gta","pes(2019)"};
+        System.out.println(getActualNames(arr));
     }
 }
